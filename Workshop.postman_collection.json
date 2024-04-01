@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "865f8faf-c3b7-4c5a-b5dd-fbf38aca362f",
+		"name": "Workshop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33374059"
+	},
+	"item": [
+		{
+			"name": "CREATE ACCOMMODATION",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Seaside Resort Villa\",\r\n  \"address\": \"101 Ocean Avenue, Beachtown\",\r\n  \"bookingPricePerDay\": 500,\r\n  \"type\": \"apartment\",\r\n  \"hasAC\": true,\r\n  \"hasPrivateParking\": true,\r\n  \"hasWifi\": true,\r\n  \"isAvailable\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/accommodations",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"accommodations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL ACCOMMODATIONS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/accommodations",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"accommodations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ACCOMMODATION BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/accommodations/660ae381358017ed075f4434",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"accommodations",
+						"660ae381358017ed075f4434"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE BY ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/accommodations/660ae3b6358017ed075f4438",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"accommodations",
+						"660ae3b6358017ed075f4438"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EDIT ACCOMMODATION",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \r\n            \"name\": \"Seaside Resort Villa\",\r\n            \"address\": \"101 Ocean Avenue, Beachtown\",\r\n            \"bookingPricePerDay\": 300,\r\n            \"type\": \"apartment\",\r\n            \"hasPrivateParking\": false,\r\n            \"hasWifi\": false,\r\n            \"isAvailable\": true\r\n            \r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/accommodations/660ae3cb358017ed075f443a",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"accommodations",
+						"660ae3cb358017ed075f443a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BOOK ACCOMMODATION",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accommodationId\": \"660af79ba7ad55bf62616f50\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/booking",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"booking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET BOOKINGS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/booking",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"booking"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "8b27bab7-992e-4c2b-8122-8ad58fbc6434",
+		"name": "Homework-Recipe",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33374059"
+	},
+	"item": [
+		{
+			"name": "CREATE RECIPE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"recipeName\": \"Kung Pao Chicken\",\r\n  \"description\": \"Kung Pao Chicken is a spicy and flavorful Chinese dish made with tender chicken, peanuts, vegetables, and chili peppers. It's stir-fried to perfection and served with steamed rice.\",\r\n  \"cookingDuration\": \"30 minutes\",\r\n  \"ingredients\": [\r\n    \"1 lb boneless, skinless chicken breasts, cut into bite-sized pieces\",\r\n    \"1/2 cup roasted peanuts\",\r\n    \"1 bell pepper, diced\",\r\n    \"1 onion, diced\",\r\n    \"3 cloves garlic, minced\",\r\n    \"1 tablespoon ginger, minced\",\r\n    \"2 green onions, chopped (for garnish)\",\r\n    \"3 tablespoons soy sauce\",\r\n    \"2 tablespoons rice vinegar\",\r\n    \"2 tablespoons hoisin sauce\",\r\n    \"1 tablespoon cornstarch\"\r\n  ],\r\n  \"servings\": 4,\r\n  \"difficulty\": \"Medium\",\r\n  \"cuisine\": \"Chinese\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/recipes",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"recipes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL RECIPES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/recipes",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"recipes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET RECIPE BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/recipes/660a934a7b7c3c59c797593d",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"recipes",
+						"660a934a7b7c3c59c797593d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE RECIPE BY ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/recipes/660a96707b7c3c59c7975947",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"recipes",
+						"660a96707b7c3c59c7975947"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EDIT RECIPE BY ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"recipeName\": \"Sarma (stuffed cabbage rolls)\",\r\n    \"description\": \"Sarma or Macedonian cabbage rolls are a delicious meal that is common in cultures that were part of the Ottoman Empire\",\r\n    \"cookingDuration\": \"2 hours\",\r\n    \"ingredients\": [\r\n        \"minced meat\",\r\n        \"cabbage\",\r\n        \"salt\",\r\n        \"pepper\",\r\n        \"rice\",\r\n        \"water\"\r\n],\r\n    \"servings\": 2,\r\n    \"difficulty\": \"MEDIUM\",\r\n    \"cuisine\": \"Macedonian\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/recipes/660a934a7b7c3c59c797593d",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"recipes",
+						"660a934a7b7c3c59c797593d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
